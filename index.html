@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Color Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="gradient-preview"></div>
+      <div class="controls">
+        <div class="control">
+          <label for="direction">Direction:</label>
+          <select id="direction">
+            <option value="to top">Top</option>
+            <option value="to right top">Right Top</option>
+            <option value="to right">Right</option>
+            <option value="to right bottom">Right Bottom</option>
+            <option value="to bottom">Bottom</option>
+            <option value="to left bottom">Left Bottom</option>
+            <option value="to left">Left</option>
+            <option value="to left top" selected>Left Top</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="color1">Color 1:</label>
+          <input id="color1" type="color" value="#5665E9" />
+          <label for="color2">Color 2:</label>
+          <input id="color2" type="color" value="#A271F8" />
+        </div>
+      </div>
+      <textarea id="css-output" readonly>background: linear-gradient(to left top, #5665E9, #A271F8);</textarea>
+      <div class="buttons">
+        <button id="refresh">Refresh Colors</button>
+        <button id="copy">Copy Code</button>
+      </div>
+    </div>
+  </body>
+</html>
