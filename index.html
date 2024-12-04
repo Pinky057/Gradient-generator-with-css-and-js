@@ -8,34 +8,50 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="card">
-      <div class="gradient-preview"></div>
-      <div class="controls">
-        <div class="control">
-          <label for="direction">Direction:</label>
-          <select id="direction">
-            <option value="to top">Top</option>
-            <option value="to right top">Right Top</option>
-            <option value="to right">Right</option>
-            <option value="to right bottom">Right Bottom</option>
-            <option value="to bottom">Bottom</option>
-            <option value="to left bottom">Left Bottom</option>
-            <option value="to left">Left</option>
-            <option value="to left top" selected>Left Top</option>
-          </select>
-        </div>
-        <div class="control">
-          <label for="color1">Color 1:</label>
-          <input id="color1" type="color" value="#5665E9" />
-          <label for="color2">Color 2:</label>
-          <input id="color2" type="color" value="#A271F8" />
-        </div>
-      </div>
-      <textarea id="css-output" readonly>background: linear-gradient(to left top, #5665E9, #A271F8);</textarea>
-      <div class="buttons">
-        <button id="refresh">Refresh Colors</button>
-        <button id="copy">Copy Code</button>
-      </div>
+<div class="card">
+  <div class="gradient-preview"></div>
+  <div class="controls">
+    <div class="control">
+      <label for="gradient-type">Gradient Type:</label>
+      <select id="gradient-type">
+        <option value="linear" selected>Linear</option>
+        <option value="radial">Radial</option>
+      </select>
     </div>
+    <div class="control">
+      <label for="direction">Direction (For Linear):</label>
+      <select id="direction">
+        <option value="to top">Top</option>
+        <option value="to right top">Right Top</option>
+        <option value="to right">Right</option>
+        <option value="to right bottom">Right Bottom</option>
+        <option value="to bottom">Bottom</option>
+        <option value="to left bottom">Left Bottom</option>
+        <option value="to left">Left</option>
+        <option value="to left top" selected>Left Top</option>
+      </select>
+    </div>
+    <div class="controlColor">
+  <label for="color1">Color 1:</label>
+  <input id="color1" type="color" value="#5665E9" />
+  <label for="opacity1">Opacity 1:</label>
+  <input id="opacity1" type="range" min="0" max="1" step="0.01" value="1" />
+</div>
+<div class="controlColor">
+  <label for="color2">Color 2:</label>
+  <input id="color2" type="color" value="#A271F8" />
+  <label for="opacity2">Opacity 2:</label>
+  <input id="opacity2" type="range" min="0" max="1" step="0.01" value="1" />
+</div>
+
+    
+  </div>
+  <textarea id="css-output" readonly>background: linear-gradient(to left top, rgba(86, 101, 233, 1), rgba(162, 113, 248, 1));</textarea>
+  <div class="buttons">
+    <button id="refresh">Refresh Colors</button>
+    <button id="copy">Copy Code</button>
+  </div>
+</div>
+
   </body>
 </html>
