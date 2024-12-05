@@ -13,8 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #8a6cff;
-  padding: 10px;
+ background: radial-gradient(circle, rgba(86, 101, 233, 1), rgba(152, 122, 205, 1));  padding: 10px;
 }
 
 .card {
@@ -47,6 +46,12 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+.controlColor{
+  display: flex;
+  flex-direction: column;
+ justify-content: space-evenly;
+  gap: 8px;
+}
 
 label {
   font-size: 0.9rem;
@@ -61,10 +66,9 @@ input {
   border-radius: 5px;
 }
 input{
- height: 41px;
- width: calc(100% / 2 - 20px);
+  height: 45px;
+  width:80%;
 }
-
 textarea {
   width: 100%;
   padding: 10px;
@@ -118,4 +122,15 @@ button {
   button {
     font-size: 0.8rem;
   }
+}
+.controlColor input[type="range"] {
+  width: 100%;
+} 
+input[type="color"] {
+  width: 100%; /* Ensure full width */
+  height: 45px; /* Consistent height */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0; /* Remove padding */
 }
